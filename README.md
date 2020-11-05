@@ -9,3 +9,7 @@ For this project I plan to use two different datasets to prepare data for my ana
 ### Unknowns
 The creation of the dataset is inspired from a similar analysis performed by Harold Li that can be found on [github](https://github.com/haroldmli/01-Chicago-Crime-Rates-and-Housing-Prices). Since the original sources of data used for this analysis are no longer available, I will be substituting data from [Zillow](https://www.zillow.com/research/data/) and [Kaggle](https://www.kaggle.com/chicago/chicago-crime). While combining the two data sources, there may be mismatches between the neighborhoods in the two datasets which may lead to problems in creating the data.
 
+### Licence
+This code is available under the [MIT License](LICENSE)
+
+
