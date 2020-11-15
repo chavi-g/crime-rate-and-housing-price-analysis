@@ -1,15 +1,27 @@
 # Analysis on Impact of Crime on Rental and Housing Prices in Chicago
 
 ### Motivation
-Safety has been considered a fundamental human right since the beginning of the beginning of the human rights era. Maintaining Law and Order is one the most basic and important responsibilities of any local government. Crime rate thus becomes a very important indicator for comparing neighborhoods. One of the most studied effects of crime is the impact it has on the housing and rental rates in any communities. One of the easiest ways to measure crime is to explore the housing and rental rates in a given area. The goal of this project is to study the relationship betweeen crime rate and housing prices in Chicago city (known for Law and Order!) and the to discover patterns in the types of crimes that effect housing prices more than others.
+Safety has been considered a fundamental human right since the beginning of the beginning of the human rights era. Maintaining Law and Order is one the most basic and important responsibilities of any local government. Crime rate thus becomes a very important indicator for comparing neighborhoods. One of the most studied effects of crime is the impact it has on the housing and rental rates in any communities. One of the easiest ways to measure crime is to explore the housing and rental rates in a given area. The goal of this project is to study the relationship betweeen crime rate and housing prices in Chicago city and the to discover patterns in the types of crimes that effect housing prices more than others.
+
+### Previous Work
+My inspiration for this analysis is based on the work done by Harold Li that can be found on [Databucket](https://databuckets.org/databucket/2016/01/exploring-chicago-crime-and-housing.html). The analysis for this research was based on Trulia API data. The results from his work showed that crime rates inversely impact housing rates and there is a non-linear relationship between them. To add to this analysis, I would like to also see if different crime types have different effects on the housing prices.
+
+### Research Questions & Methodology
+
+ - Is there a strong relationship between crime rates and housing prices in Chicago at the neighborhood level? Are changes in  crime rates a strong predictor for changes in housing prices?  
+     - For this I will perform a linear regression (housing price ~ crime rate) to understand the relationship between the crime rates and housing prices. This would involve trying different models (ridge, lasso,, etc.) and finding any non-linear relationships (log-linear, etc.)
+     - The $R^2$ value would determine whether changes in crime rates are a strong predictor for housing prices.
+  
+  
+ - Do different crimes have different effects on the housing prices?  
+     - For this analysis I plan to fit a linear regression (huosing price ~ crime rate + crime type) to see whether there is a substantial difference between the coefficients of different crime types.
 
 ### Dataset
-For this project I plan to use two different datasets to prepare data for my analysis. I plan to use the [Zillow Dataset](https://www.zillow.com/research/data/) to get the housing prices for neighborhoods in Chicago. For crime I plan to use the Chicago Crimes dataset that is publically available for use on [the official website of the City of Chicago](https://data.cityofchicago.org/Public-Safety/Crimes-2019/w98m-zvie) under the following [Terms of Use](https://www.chicago.gov/city/en/narr/foia/data_disclaimer.html). I will also use [Craig M. Booth's github code](https://github.com/craigmbooth/chicago_neighborhood_finder/tree/739deff8f9f349720299b193b4259aa690876e52) to map the latitude-longitude data to the neighborhoods in the housing dataset. 
-
-### Unknowns
-The creation of the dataset is inspired from a similar analysis performed by Harold Li that can be found on [github](https://github.com/haroldmli/01-Chicago-Crime-Rates-and-Housing-Prices). Since the original sources of data used for this analysis are no longer available, I will be substituting data from [Zillow](https://www.zillow.com/research/data/) and [Kaggle](https://www.kaggle.com/chicago/chicago-crime). While combining the two data sources, there may be mismatches between the neighborhoods in the two datasets which may lead to problems in creating the data.
+For this project I have used four different datasets to create data for my analysis. I used the [Zillow Dataset](https://www.zillow.com/research/data/) to get the housing prices for neighborhoods in Chicago. For crime I used the Chicago Crimes dataset that is publically available on [the official website of the City of Chicago](https://data.cityofchicago.org/Public-Safety/Crimes-2019/w98m-zvie) under the following [Terms of Use](https://www.chicago.gov/city/en/narr/foia/data_disclaimer.html). In order to normalize the crime counts based on the neighborhood poplulations, I used the 2010 Census data for the population at neighborhood level. The data is available from the [Datahub website](https://datahub.cmap.illinois.gov/dataset/community-data-snapshots-raw-data/resource/8c4e096e-c90c-4bef-9cf1-9028d094296e?inner_span=True). Finally for mapping the latitude-longitude coordinates in the crime dataset to Zillow defined neighborhoods, I used the nieghborhood boundary data generated in the [github repository](https://github.com/mashvisor/us-neighborhoods-boundaries/blob/master/out/csv/IL-Regions.csv).  
 
 ### Licence
-This code is available under the [MIT License](LICENSE)
+This code is available under the [MIT License](LICENSE)  
 
+Zillow's dataset is available under the following [Terms of Use](https://www.zillow.com/z/corp/terms/)  
 
+All data from the Chicago Open Data website is available for use under the following [Data Terms of Use](https://www.chicago.gov/city/en/narr/foia/data_disclaimer.html)  
