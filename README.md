@@ -10,7 +10,7 @@ My inspiration for this analysis is based on the work done by Harold Li that can
 
  - Is there a strong relationship between crime rates and housing prices in Chicago at the neighborhood level? Are changes in  crime rates a strong predictor for changes in housing prices?  
      - For this I will perform a linear regression (housing price ~ crime rate) to understand the relationship between the crime rates and housing prices. This would involve trying different models (ridge, lasso,, etc.) and finding any non-linear relationships (log-linear, etc.)
-     - The $R^2$ value would determine whether changes in crime rates are a strong predictor for housing prices.
+     - The ![equation](https://latex.codecogs.com/gif.latex?R%5E2) value would determine whether changes in crime rates are a strong predictor for housing prices.
   
   
  - Do different crimes have different effects on the housing prices?  
