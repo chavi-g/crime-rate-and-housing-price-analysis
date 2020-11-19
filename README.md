@@ -5,16 +5,20 @@ Safety has been considered a fundamental human right since the beginning of the 
 
 ### Previous Work
 My inspiration for this analysis is based on the work done by Harold Li that can be found on [Databucket](https://databuckets.org/databucket/2016/01/exploring-chicago-crime-and-housing.html). The analysis for this research was based on Trulia API data. The results from his work showed that crime rates inversely impact housing rates and there is a non-linear relationship between them. To add to this analysis, I would like to also see if different crime types have different effects on the housing prices.
+     
+### Research Questions
 
-### Research Questions & Methodology
-
- - Is there a strong relationship between crime rates and housing prices in Chicago at the neighborhood level? Are changes in  crime rates a strong predictor for changes in housing prices?  
-     - For this I will perform a linear regression (housing price ~ crime rate) to understand the relationship between the crime rates and housing prices. This would involve trying different models (ridge, lasso,, etc.) and finding any non-linear relationships (log-linear, etc.)
-     - The ![equation](https://latex.codecogs.com/gif.latex?R%5E2) value would determine whether changes in crime rates are a strong predictor for housing prices.
+ - **H1.0:** Is there a strong relationship between crime rates and housing prices in Chicago at the neighborhood level? Are changes in  crime rates a strong predictor for changes in housing prices?  
+     
   
   
- - Do different crimes have different effects on the housing prices?  
-     - For this analysis I plan to fit a linear regression (huosing price ~ crime rate + crime type) to see whether there is a substantial difference between the coefficients of different crime types.
+ - **H2.0:** Do different types of crimes have different effects on the housing prices?  
+     
+### Methodology
+- For determining the relationship between the crime rates and the housing prices (H1.0), I will perform a linear regression (housing price ~ crime rate) to understand the relationship between the crime rates and housing prices. This would involve trying different models (ridge, lasso,, etc.) and finding any non-linear relationships (log-linear, etc.).  
+The ![equation](https://latex.codecogs.com/gif.latex?R%5E2) value will determine whether changes in crime rates are a strong predictor for housing prices.
+- For determining the effect of different types of crimes on the housing prices (H2.0), I plan to fit a linear regression (huosing price ~ crime rate + crime type) to see whether there is a substantial difference between the coefficients of different crime types. I also plan to perform an Anova test to determine whether the crime type has a significant effect on the housing prices.
+
 
 ### Dataset
 For this project I have used four different datasets to create data for my analysis. I used the [Zillow Dataset](https://www.zillow.com/research/data/) to get the housing prices for neighborhoods in Chicago. For crime I used the Chicago Crimes dataset that is publically available on [the official website of the City of Chicago](https://data.cityofchicago.org/Public-Safety/Crimes-2019/w98m-zvie). In order to normalize the crime counts based on the neighborhood poplulations, I used the 2010 Census data for the population at neighborhood level. The data is available from the [Datahub website](https://datahub.cmap.illinois.gov/dataset/community-data-snapshots-raw-data/resource/8c4e096e-c90c-4bef-9cf1-9028d094296e?inner_span=True). Finally for mapping the latitude-longitude coordinates in the crime dataset to Zillow defined neighborhoods, I used the nieghborhood boundary data generated in the [github repository](https://github.com/mashvisor/us-neighborhoods-boundaries/blob/master/out/csv/IL-Regions.csv).  
