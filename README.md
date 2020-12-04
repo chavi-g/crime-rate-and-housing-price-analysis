@@ -1,4 +1,4 @@
-# Analysis on Impact of Crime on Rental and Housing Prices in Chicago
+# Impact of Crime on Housing Prices in Chicago
 
 ### Motivation
 Safety has been considered a fundamental human right since the beginning of the beginning of the human rights era. Maintaining Law and Order is one the most basic and important responsibilities of any local government. Crime rate thus becomes a very important indicator for comparing neighborhoods. One of the most studied effects of crime is the impact it has on the housing and rental rates in any communities. One of the easiest ways to measure crime is to explore the housing and rental rates in a given area. The goal of this project is to study the relationship betweeen crime rate and housing prices in Chicago city and the to discover patterns in the types of crimes that effect housing prices more than others.
