@@ -39,10 +39,10 @@ The ![equation](https://latex.codecogs.com/gif.latex?R%5E2) value will determine
 │   ├── crime_vs_prices_regression_log_scaled.png
 │   ├── crimes_type_vs_prices_log_scale.png
 │   └── housing_price_distributions.png
-├── data-preparation.ipynb
-├── final-project-report.ipynb
 ├── LICENSE
-└── README.md  
+├── README.md
+├── data-preparation.ipynb
+└── final-project-report.ipynb  
 
 ```
 
