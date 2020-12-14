@@ -19,6 +19,32 @@ My inspiration for this analysis is based on the work done by Harold Li that can
 The ![equation](https://latex.codecogs.com/gif.latex?R%5E2) value will determine whether changes in crime rates are a strong predictor for housing prices.
 - For determining the effect of different types of crimes on the housing prices (H2.0), I plan to fit a linear regression (housing price ~ crime rate + crime type) to see whether there is a substantial difference between the coefficients of different crime types. I also plan to perform an Anova test to determine whether the crime type has a significant effect on the housing prices.
 
+## Directory Structure
+
+```
+.
+├── data
+│   └── input
+│        ├── Chicago_Crimes_Dataset_2019.csv
+│        ├── chicago_population_data.csv
+│        ├── IL-Regions.csv
+│        └── zillow_zhvi_neighborhood_dataset.csv
+│   └── out
+│        ├── crime_data_with_hoods.csv
+│        ├── crime_final.csv
+│        ├── final_data.csv
+│        └── housing_zhvi_final
+├── images
+│   ├── crime_vs_prices_regression.png
+│   ├── crime_vs_prices_regression_log_scaled.png
+│   ├── crimes_type_vs_prices_log_scale.png
+│   └── housing_price_distributions.png
+├── data-preparation.ipynb
+├── final-project-report.ipynb
+├── LICENSE
+└── README.md  
+
+```
 
 ### Dataset
 For this project I have used four different datasets to create data for my analysis. I used the [Zillow Dataset](https://www.zillow.com/research/data/) to get the housing prices for neighborhoods in Chicago. For crime I used the Chicago Crimes dataset that is publically available on [the official website of the City of Chicago](https://data.cityofchicago.org/Public-Safety/Crimes-2019/w98m-zvie). In order to normalize the crime counts based on the neighborhood poplulations, I used the 2010 Census data for the population at neighborhood level. The data is available from the [Datahub website](https://datahub.cmap.illinois.gov/dataset/community-data-snapshots-raw-data/resource/8c4e096e-c90c-4bef-9cf1-9028d094296e?inner_span=True). Finally for mapping the latitude-longitude coordinates in the crime dataset to Zillow defined neighborhoods, I used the nieghborhood boundary data generated in the [github repository](https://github.com/mashvisor/us-neighborhoods-boundaries/blob/master/out/csv/IL-Regions.csv).  
