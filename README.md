@@ -53,8 +53,6 @@ The jupyter notebook containing the steps for data preparation can be found [her
 ![](images/crime_rate_vs_domestic_crime_rate.png)
 
 
-The jupyter notebook containing the analyis can be found [here](final-project-report.ipynb).
-
 ### II. Explore relationship between the Types of Crimes and Housing Prices
 
 **Question**. Do different types of crimes have different effects on the housing prices?
@@ -63,6 +61,7 @@ The jupyter notebook containing the analyis can be found [here](final-project-re
 
 ![](images/crimes_type_vs_prices_log_scale.png)
 
+The jupyter notebook containing the analyis can be found [here](final-project-report.ipynb).
 
 ## Licence
 This code is available under the [MIT License](LICENSE)  
